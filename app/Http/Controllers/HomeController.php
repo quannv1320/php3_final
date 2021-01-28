@@ -14,4 +14,11 @@ class HomeController extends Controller
         $categories = Category::all();
         return view('clients.homepage', compact('posts', 'categories'));
     }
+
+    public function showPost()
+    {
+        $posts = Post::all();
+        $categories = Category::all();
+        return view('clients.post', compact('posts', 'categories'));
+    }
 }

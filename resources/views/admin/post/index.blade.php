@@ -13,7 +13,7 @@
             <th>Short_desc</th>
             <th>Author</th>
             <th>
-                <a href="{{ route('post.add') }}" class="btn btn-sm btn-success">Create new</a>    
+                <a href="{{ route('post.add') }}" class="btn btn-sm btn-success">Add</a>    
             </th>    
         </tr>   
     </thead> 

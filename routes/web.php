@@ -16,3 +16,4 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
+Route::get('post', [HomeController::class, 'showPost'])->name('client.post');
