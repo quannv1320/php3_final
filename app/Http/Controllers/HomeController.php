@@ -12,13 +12,13 @@ class HomeController extends Controller
     {
         $posts = Post::all();
         $categories = Category::all();
-        return view('clients.homepage', compact('posts', 'categories'));
+        return view('clients.main', compact('posts', 'categories'));
     }
 
-    public function showPost()
-    {
-        $posts = Post::all();
-        $categories = Category::all();
-        return view('clients.post', compact('posts', 'categories'));
+
+    public function showPost($id){
+        $post = Post::find($id);
+
+        return view('clients.post', compact('post'));
     }
 }

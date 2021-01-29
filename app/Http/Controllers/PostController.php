@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SavePostRequest;
 use App\Models\Post;
 use App\Models\Category;
 
@@ -27,7 +28,7 @@ class PostController extends Controller
         $categories = Category::all();
         return view('admin.post.add', compact('categories'));
     }
-    public function saveAdd(Request $request)
+    public function saveAdd(SavePostRequest $request)
     {
         // return $request;
 
