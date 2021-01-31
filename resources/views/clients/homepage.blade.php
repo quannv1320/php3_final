@@ -152,7 +152,7 @@
     </div>
     <!-- Single -->
      
-    @foreach ($post->slice(0, 5) as $post)
+    @foreach ($posts->slice(0, 5) as $post)
         <div class="most-recent-single">
             <div class="most-recent-images">
                 <img src="{{ $post->image }}" width="100">
