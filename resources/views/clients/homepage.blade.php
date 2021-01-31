@@ -151,14 +151,15 @@
         </div>
     </div>
     <!-- Single -->
-    @foreach ($posts->slice(0, 5) as $post)
+     
+    @foreach ($post->slice(0, 5) as $post)
         <div class="most-recent-single">
             <div class="most-recent-images">
                 <img src="{{ $post->image }}" width="100">
             </div>
             <div class="most-recent-capt">
                 <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $post->title }}</a></h4>
-                <p>Jhon  |  2 hours ago</p>
+                <p>View: {{ $post->view->view }}</p>
             </div>
         </div>
     @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\View;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,9 @@ class HomeController extends Controller
     {
         $posts = Post::all();
         $categories = Category::all();
-        return view('clients.homepage', compact('posts', 'categories'));
+
+        $postttt = rsort($posts);
+        return view('clients.homepage', compact('posts', 'categories', 'postttt'));
     }
 
 
@@ -29,4 +32,15 @@ class HomeController extends Controller
         $categories = Category::all();
         return view('clients.topNews', compact('categories'));
     }
+
+
+    public function upView(Request $request){
+        $view = View::find($request->id);
+        $view->view += 1;
+        $view->save();
+        return response()->json($view);
+    }
+
 }
+
+

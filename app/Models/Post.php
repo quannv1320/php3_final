@@ -15,4 +15,10 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class, 'cate_id', 'id');
     }
+
+    public function view()
+    {
+        return $this->hasOne(View::class);
+    }
+
 }

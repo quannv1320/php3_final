@@ -316,6 +316,6 @@
 
 <!-- JS here -->
 @include('clients.layouts.script')
-    
+@yield('page-script')
 </body>
 </html>
