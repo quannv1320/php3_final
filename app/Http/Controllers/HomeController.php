@@ -13,9 +13,7 @@ class HomeController extends Controller
     {
         $posts = Post::all();
         $categories = Category::all();
-
-        $postttt = rsort($posts);
-        return view('clients.homepage', compact('posts', 'categories', 'postttt'));
+        return view('clients.homepage', compact('posts', 'categories'));
     }
 
 
