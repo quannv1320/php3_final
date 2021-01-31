@@ -17,8 +17,16 @@ class HomeController extends Controller
 
 
     public function showPost($id){
+        $posts = Post::all();
+        $categories = Category::all();
         $post = Post::find($id);
 
-        return view('clients.post', compact('post'));
+        return view('clients.post', compact('post', 'posts', 'categories'));
+    }
+
+    public function topNew()
+    {
+        $categories = Category::all();
+        return view('clients.topNews', compact('categories'));
     }
 }
