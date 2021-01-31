@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    @include('clients.style')
+    @include('clients.layouts.style')
 </head>
 
 <body>
@@ -908,7 +908,7 @@
 <!-- Search model end -->
 
 <!-- JS here -->
-@include('clients.script')
+@include('clients.layouts.script')
     
 </body>
 </html>

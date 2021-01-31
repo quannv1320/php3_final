@@ -6,7 +6,7 @@
   <title>Admin manage</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  @include('layouts.style')
+  @include('admin.layouts.style')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -137,6 +137,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-@include('layouts.script')
+@include('admin.layouts.script')
 </body>
 </html>

@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         $posts = Post::all();
         $categories = Category::all();
-        return view('clients.main', compact('posts', 'categories'));
+        return view('clients.homepage', compact('posts', 'categories'));
     }
 
 
