@@ -136,7 +136,7 @@
 <div class="most-recent-area">
     <!-- Section Tittle -->
     <div class="small-tittle mb-20">
-        <h4>Most Recent</h4>
+        <h3>Top News</h3>
     </div>
     <!-- Details -->
     <div class="most-recent mb-40">
@@ -152,7 +152,7 @@
     </div>
     <!-- Single -->
      
-    @foreach ($posts->slice(0, 5) as $post)
+    @foreach ($topPosts->slice(0, 5) as $post)
         <div class="most-recent-single">
             <div class="most-recent-images">
                 <img src="{{ $post->image }}" width="100">

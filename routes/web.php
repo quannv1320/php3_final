@@ -18,8 +18,7 @@ Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('post/{id}', [HomeController::class, 'showPost', 'main'])->name('client.post');
 
-Route::get('top', [HomeController::class, 'topNew'])->name('client.top');
+Route::get('topnew', [HomeController::class, 'topNew'])->name('client.topNew');
 
-Route::post('post/api/up-view', [ProductController::class, 'upView'])
-->name('post.upView');
-
+// Route::post('post/api/up-view', [ProductController::class, 'upView'])
+// ->name('post.upView');

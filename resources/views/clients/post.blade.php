@@ -65,7 +65,7 @@
 
 
 {{-- Tăng view --}}
-@section('page-script')
+{{-- @section('page-script')
 <script>
     let increaseViewUrl = "{{route('post.upView')}}";
     const data = {
@@ -88,4 +88,4 @@
     }, 2000);
 </script>
     
-@endsection
+@endsection --}}

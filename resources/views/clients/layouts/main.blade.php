@@ -75,7 +75,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('client.top') }}">Top News</a></li>
+                                        <li><a href="{{ route('client.topNew') }}">Top News</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
