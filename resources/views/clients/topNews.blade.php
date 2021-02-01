@@ -1,49 +1,55 @@
 @extends('clients.layouts.main')
 
 @section('new')
-<div class="whats-news-wrapper">
-    <!-- Heading & Nav Button -->
-        <div class="row justify-content-between align-items-end mb-15">
-            <div class="col-xl-4">
-                <div class="section-tittle mb-30">
-                    <h3>TOP New</h3>
-                </div>
-            </div>
-            <div class="col-xl-8 col-md-9">
-                <div class="properties__button">
-
-                </div>
-            </div>
-        </div>
-        <!-- Tab content -->
-        <div class="row">
-            <div class="col-12">
-                <!-- Nav Card -->
-                <div class="tab-content" id="nav-tabContent">
-                    <!-- card one -->
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">       
-                        <div class="row">
-                            @foreach ($posts as $post)
-                                <div class="col-xl-6 col-lg-6 col-md-6">
-                                    <div class="whats-news-single mb-40 mb-40">
-                                        <div class="whates-img">
-                                            <img src="{{ $post->image }}" alt="">
-                                        </div>
-                                        <div class="whates-caption whates-caption2">
-                                            <h4><a href="#">{{ $post->title }}</a></h4>
-                                            <span>View: {{ $post->view->view }}</span>
-                                            <p>{{ $post->short_desc }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            <!-- End Nav Card -->
-            </div>
-        </div>
+<div class="col-xl-4">
+    <div class="section-tittle mb-30">
+        <h3>Top News</h3>
+    </div>
 </div>
+    <div class="blog_left_sidebar">
+        @foreach ($posts->slice(0, 4) as $post)
+            <article class="blog_item">
+                <div class="blog_item_img">
+                    <img class="card-img rounded-0" src="{{ $post->image }}" alt="">
+                    <a href="#" class="blog_item_date">
+                        <h3>TOP {{$loop->iteration}}</h3>
+                    </a>
+                </div>
+
+                <div class="blog_details">
+                    <a class="d-inline-block" href="single-blog.html">
+                        <a href="{{ route('client.post',  ['id' => $post->id]) }}"><h2>{{ $post->title }}</h2></a>
+                    </a>
+                    <p>{{ $post->short_desc }}</p>
+                    <ul class="blog-info-link">
+                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                    </ul>
+                </div>
+            </article>
+        @endforeach
+
+        <nav class="blog-pagination justify-content-center d-flex">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Previous">
+                        <i class="ti-angle-left"></i>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link active">1</a>
+                </li>
+                <li class="page-item active">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link" aria-label="Next">
+                        <i class="ti-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 @endsection
 
 @section('recent')

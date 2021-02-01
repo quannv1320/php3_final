@@ -71,7 +71,7 @@
                                         <li><a href="#">Category</a>
                                             <ul class="submenu">
                                                 @foreach ($categories as $cate)
-                                                    <li><a href="blog.html">{{ $cate->name }}</a></li>
+                                                    <li><a href="{{ route('client.postCate', ['id' => $cate->id]) }}">{{ $cate->name }}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>

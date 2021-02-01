@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -31,6 +33,15 @@ class HomeController extends Controller
         $categories = Category::all();
         $posts = Post::with('view')->get()->sortByDesc('view.view');
         return view('clients.topNews', compact('posts', 'categories'));
+    }
+
+
+    public function postCate($id){
+        $cateName = Category::find($id);
+        $posts = Post::all();
+        $categories = Category::all();
+        $postCate = Post::where('cate_id', $id)->get();
+        return view('clients.postCate', compact('postCate', 'posts', 'categories', 'cateName'));
     }
 
 

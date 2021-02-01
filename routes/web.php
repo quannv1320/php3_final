@@ -20,5 +20,7 @@ Route::get('post/{id}', [HomeController::class, 'showPost', 'main'])->name('clie
 
 Route::get('topnew', [HomeController::class, 'topNew'])->name('client.topNew');
 
+Route::get('post-cate/{id}', [HomeController::class, 'postCate'])->name('client.postCate');
+
 // Route::post('post/api/up-view', [ProductController::class, 'upView'])
 // ->name('post.upView');
