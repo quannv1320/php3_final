@@ -22,7 +22,7 @@
                     </a>
                     <p>{{ $post->short_desc }}</p>
                     <ul class="blog-info-link">
-                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i>View {{ $post->view->view }}</a></li>
                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                     </ul>
                 </div>

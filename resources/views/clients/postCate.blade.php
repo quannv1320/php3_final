@@ -6,7 +6,7 @@
         <div class="row justify-content-between align-items-end mb-15">
             <div class="col-xl-4">
                 <div class="section-tittle mb-30">
-                    <h3>{{ $cateName->name }}</h3>
+                    <h3>{{ $cateName->name }} News</h3>
                 </div>
             </div>
             <div class="col-xl-8 col-md-9">

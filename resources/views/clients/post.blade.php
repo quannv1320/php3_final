@@ -6,7 +6,6 @@
         <h3>
             {{ $post->title }}
         </h3>
-        <p id="viewNumber">{{ $post->view->view }}</p>
     </div>
     <div class="about-prea">
         {{ $post->short_desc }}

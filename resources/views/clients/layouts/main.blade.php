@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>News</title>
+    <title>Newspaper</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -25,8 +25,8 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left">
                                 <ul>     
-                                    <li class="title"><span class="flaticon-energy"></span> trending-title</li>
-                                    <li>Class property employ ancho red multi level mansion</li>
+                                    <li class="title"><span class="flaticon-energy"></span>FPT Polytechnic</li>
+                                    <li>Nguyễn Văn Quân - PH07132</li>
                                 </ul>
                             </div>
                             <div class="header-info-right">
@@ -44,7 +44,7 @@
                         <!-- Logo -->
                         <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
                             <div class="logo">
-                                <a href="index.html"><img src="{{ asset('template/assets/img/logo/logo.png') }}" alt=""></a>
+                                <a href="{{ route('homepage') }}"><img src="{{ asset('template/assets/img/logo/logo.png') }}" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9">
@@ -61,7 +61,7 @@
                         <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
                             <!-- sticky -->
                             <div class="sticky-logo">
-                                <a href="index.html"><img src="{{ asset('template/assets/img/logo/logo.png') }}" alt=""></a>
+                                <a href=""><img src="{{ asset('template/assets/img/logo/logo.png') }}" alt=""></a>
                             </div>
                             <!-- Main-menu -->
                             <div class="main-menu d-none d-md-block">
@@ -85,10 +85,10 @@
                             <div class="header-right f-right d-none d-lg-block">
                                 <!-- Heder social -->
                                 <ul class="header-social">    
-                                    <li><a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li> <a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://www.facebook.com/quannv1320/"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="javascript:;"><i class="fab fa-instagram"></i></a></li>
+                                    <li> <a href="javascript:;"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                                 <!-- Search Nav -->
                                 <div class="nav-search search-switch">
