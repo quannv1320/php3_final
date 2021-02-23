@@ -106,15 +106,21 @@
                         <div class="col-xl-6 col-lg-12">
                             <div class="row">
                                 <!-- single -->
-                                @foreach ($posts->slice(0, 4) as $post)
+
+                                @php
+                                    $post_arr = $posts->toArray();
+                                    $random_key = array_rand($post_arr, 4);
+                                @endphp
+
+                                @foreach ($random_key as $post_random)
                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                         <div class="whats-right-single mb-20">
                                             <div class="whats-right-img">
-                                                <img src="{{ $post->image }}" width="120">
+                                                <img src="{{ $posts[$post_random]->image }}" width="120">
                                             </div>
                                             <div class="whats-right-cap">
-                                                <span class="colorb">{{ $post->category->name }}</span>
-                                                <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $post->title }}</a></h4>
+                                                <span class="colorb">{{ $posts[$post_random]->name }}</span>
+                                                <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $posts[$post_random]->title }}</a></h4>
                                                 <p>Jun 19, 2020</p> 
                                             </div>
                                         </div>
@@ -151,7 +157,8 @@
         </div>
     </div>
     <!-- Single -->
-     
+    
+
     @foreach ($topPosts->slice(0, 5) as $post)
         <div class="most-recent-single">
             <div class="most-recent-images">
