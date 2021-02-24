@@ -19,7 +19,7 @@ Route::post('login', [LoginController::class, 'postLogin']);
 Route::any('logout', function()
 {
     Auth::logout();
-    return redirect(route('login'));
+    return redirect(route('homepage'));
 })->name('logout');
 
 //Category

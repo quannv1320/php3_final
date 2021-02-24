@@ -31,7 +31,14 @@
                             </div>
                             <div class="header-info-right">
                                 <ul class="header-date">
-                                    <li><a href="{{ route('login') }}">Sign in</a></li>
+                                    @auth
+                                       <li>Hi, {{ Auth::user()->name }}</li>
+                                    @endauth
+
+                                    @guest
+                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                    @endguest
+                                    {{-- <li><a href="{{ route('login') }}">Sign in</a></li> --}}
                                 </ul>
                             </div>
                         </div>

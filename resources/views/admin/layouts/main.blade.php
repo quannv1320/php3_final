@@ -38,7 +38,7 @@
       </div>
     </form>
     <ul class="navbar-nav ml-auto">
-        <a href="{{ route('homepage') }}">Sign out   <i class="fas fa-sign-out-alt"></i></a>
+        <a href="{{ route('logout') }}">logout</a>
     </ul>
   </nav>
   <!-- /.navbar -->
