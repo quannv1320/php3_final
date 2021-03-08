@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="whates-caption whates-caption2">
                                             <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $post->title }}</a></h4>
-                                            <span>View: {{ $post->view->view }}</span>
+                                            <span>View: {{ isset($post->view) ? $post->view->view : "" }}</span>
                                             <p>{{ $post->short_desc }}</p>
                                         </div>
                                     </div>

@@ -24,8 +24,9 @@ class HomeController extends Controller
         $posts = Post::all();
         $categories = Category::all();
         $post = Post::find($id);
+        $views = View::all();
 
-        return view('clients.post', compact('post', 'posts', 'categories'));
+        return view('clients.post', compact('post', 'posts', 'categories', 'views'));
     }
 
     public function topNew()
@@ -45,12 +46,12 @@ class HomeController extends Controller
     }
 
 
-    // public function upView(Request $request){
-    //     $view = View::find($request->id);
-    //     $view->view += 1;
-    //     $view->save();
-    //     return response()->json($view);
-    // }
+    public function upView(Request $request){
+        $view = View::find($request->id);
+        $view->view += 1;
+        $view->save();
+        return response()->json($view);
+    }
 
     
 

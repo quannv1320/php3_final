@@ -29,7 +29,7 @@
                 </td>
                 <td>{{ $post->short_desc }}</td>
                 <td>{{ $post->author }}</td>
-                <td>{{ $post->view->view }}</td>
+                <td>{{ isset($post->view) ? $post->view->view : "" }}</td>
                 <td>
                     <a href="{{ route('post.edit', ['id' => $post->id]) }}" class="btn btn-sm btn-primary">Edit</a>
                     <a href="{{ route('post.remove', ['id' => $post->id]) }}" class="btn btn-sm btn-danger">Remove</a>

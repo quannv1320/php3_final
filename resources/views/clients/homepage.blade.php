@@ -120,7 +120,10 @@
                                             </div>
                                             <div class="whats-right-cap">
                                                 <span class="colorb">{{ $posts[$post_random]->name }}</span>
-                                                <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $posts[$post_random]->title }}</a></h4>
+                                                <h4><a href="{{ route('client.post',  ['id' => $post->id]) }}">{{ $posts
+                                                
+                                                
+                                                [$post_random]->title }}</a></h4>
                                                 <p>Jun 19, 2020</p> 
                                             </div>
                                         </div>

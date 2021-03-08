@@ -6,6 +6,7 @@
         <h3>
             {{ $post->title }}
         </h3>
+        <p id="viewNumber">{{ $post->view->view }}</p>
     </div>
     <div class="about-prea">
         {{ $post->short_desc }}
@@ -62,29 +63,3 @@
 </div>
 @endsection
 
-
-{{-- Tăng view --}}
-{{-- @section('page-script')
-<script>
-    let increaseViewUrl = "{{route('post.upView')}}";
-    const data = {
-        id: {{$post->id}},
-        _token: "{{csrf_token()}}"
-    };
-    setTimeout(() => {
-        fetch(increaseViewUrl, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(responseData => responseData.json())
-        .then(productObj => {
-            console.log(productObj);
-            document.querySelector('#viewNumber').innerText = productObj.view;
-        })
-    }, 2000);
-</script>
-    
-@endsection --}}
